@@ -7,3 +7,8 @@ summary(fit)
 
 plot(x,y)
 abline(fit, col=2)
+library(readr)
+co2 = read_csv("~/Desktop/GEOG5680/module13/co2_mm_mlo.csv")
+plot(co2$decdate, co2$interpolated, type='l', main="Mauna Loa CO2",
+     xlab="Time", ylab="ppm")
+lines(co2$decdate, co2$trend, col=2, lwd=2)
